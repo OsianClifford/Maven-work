@@ -1,4 +1,5 @@
 package com.qa.testdrivendevelopment;
+import java.util.*;
 
 public class Questions {
 
@@ -28,7 +29,19 @@ public class Questions {
 	 * multChar("Hi-There") → "HHHiii---TTThhheeerrreee"
 	 */
 	public String multiChar(String input) {
-		return "";
+		
+		String output = "";
+		
+		for(int i = 0; i < input.length(); i++) {
+			
+			output = output + input.charAt(i);
+			output = output + input.charAt(i);
+			output = output + input.charAt(i);
+		}
+				
+		return output;
+		
+
 	}
 
 	/**
@@ -39,13 +52,52 @@ public class Questions {
 	 * For Example: sandwichFilling("breadclivebread") → "evilc"<br>
 	 * sandwichFilling("xxbreadfridgebreadyy") → "egdirf"<br>
 	 * sandwichFilling("xxBreadfridgeBReAdyy") → "egdirf"<br>
-	 * sandwichFilling("xxbreadyy") → "" sandwichFilling("xxbreADyy") → ""<br>
+	 * sandwichFilling("xxbreadyy") → ""
+	 * sandwichFilling("xxbreADyy") → ""<br>
 	 * <br>
-	 * HINT: "a" == "a" if false HINT: "a".equals("a") is true
+	 * HINT: "a" == "a" if false
+	 * HINT: "a".equals("a") is true
 	 */
 
 	public String sandwichFilling(String sandwich) {
-		return "";
+		
+		String str = sandwich.toLowerCase();
+		
+		
+		if (str.contains("bread"))
+		{
+			str = str.replace("bread", "");
+		}
+		
+		if (str.contains("xx"))
+		{
+			str = str.replace("xx", "");
+		}
+		
+		if (str.contains("yy"))
+		{
+			str = str.replace("yy", "");
+		}
+		
+		//System.out.println(str);
+		
+		String output = "";
+		for(int i = str.length() -1; i >= 0; i--)
+		{
+			output = output + str.charAt(i);
+		}
+		
+		System.out.println(output);
+		//clive
+		
+		//e
+		//ev
+		//evi
+		//evil
+		//evilc
+		
+	
+		return output;
 	}
 
 	/**
