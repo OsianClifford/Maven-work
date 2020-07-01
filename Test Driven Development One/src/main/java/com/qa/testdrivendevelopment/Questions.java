@@ -88,14 +88,6 @@ public class Questions {
 		}
 		
 		System.out.println(output);
-		//clive
-		
-		//e
-		//ev
-		//evi
-		//evil
-		//evilc
-		
 	
 		return output;
 	}
